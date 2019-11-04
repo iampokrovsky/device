@@ -4,15 +4,17 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет-магазин Device</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
   <header class="main-header">
     <nav class="main-navigation">
-      <p><strong>Device</strong></p>
+      <a class="main-logo" href="#"><strong>Device<strong></a>
       <ul class="site-navigation">
-        <li>Каталог товаров
+        <li><a href="#">Каталог товаров</a>
           <ul class="catalog-menu">
             <li><a href="#">Виртуальная реальность</a></li>
             <li><a href="#">Моноподы для селфи</a></li>
@@ -27,17 +29,16 @@
         <li><a href="#">Контакты</a></li>
       </ul>
       <ul class="user-navigation">
-        <li class="login-link"><a href="#">Войти</a></li>
+        <li><a class="login-link" href="#">Войти</a></li>
       </ul>
       <ul class="options">
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
+        <li><a class="compare" href="#">Сравнить</a></li>
+        <li><a class="cart" href="#">Корзина</a></li>
       </ul>
       <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-        <p>
-          <label for="search-field-id" class="visually-hidden">Поиск по сайту:</label>
-          <input class="search-field" type="search" name="q" id="search-field-id" placeholder="Поиск по сайту">
-        </p>
+        <input class="search-field" id="search-field-id" type="search" name="q" placeholder="Поиск по сайту">
+        <label for="search-field-id">Поиск по сайту</label>
+        <button class="button" type="submit">Найти</button>
       </form>
     </nav>
   </header>
@@ -45,13 +46,13 @@
   <main class="container">
     <h1 class="visually-hidden">Интернет-магазин гаджетов Device</h1>
     <section class="main-slides">
-      <h2 class="visually-hidden">Главные товары</h2>
+      <h2 class="visually-hidden">Популярные товары</h2>
 
-      <ul class="slides-list">
+      <ol class="slides-list">
 
         <li class="slides-item">
-          <h3 class="viisually-hidden">Палка для селфи</h3>
-          <p><img src="./img/slides-1.png" alt="Палка для селфи"></p>
+          <h3 class="visually-hidden">Палка для селфи</h3>
+          <p><img src="./img/slides-1.png" width="384" height="486" alt="Палка для селфи"></p>
           <p>
             <b>
               Делай селфи,<br>
@@ -78,8 +79,8 @@
         </li>
 
         <li class="slides-item">
-          <h3 class="viisually-hidden">Фитнес-браслет</h3>
-          <p><img src="./img/slides-2.png" alt="Фитнес-браслет"></p>
+          <h3 class="visually-hidden">Фитнес-браслет</h3>
+          <p><img src="./img/slides-2.png" width="345" height="485" alt="Фитнес-браслет"></p>
           <p>
             <b>
               Худеем<br>
@@ -102,8 +103,8 @@
         </li>
 
         <li class="slides-item">
-          <h3 class="viisually-hidden">Квадрокоптер</h3>
-          <p><img src="./img/slides-3.png" alt="Квадрокоптер"></p>
+          <h3 class="visually-hidden">Квадрокоптер</h3>
+          <p><img src="./img/slides-3.png" width="526" height="334" alt="Квадрокоптер"></p>
           <p>
             <b>
               Порхает как бабочка,<br>
@@ -127,7 +128,7 @@
           </table>
         </li>
 
-      </ul>
+      </ol>
 
       <ul class="slides-switches">
         <li class="slide-radio">
@@ -143,32 +144,44 @@
 
     </section>
 
-    <section class="popular">
-      <h2 class="visually-hidden">Популярные товары</h2>
-      <ul class="popular-list">
-        <li class="popular-item">
-          <h3><a href="">Виртуальная реальность</a></h3>
+    <section class="categories">
+      <h2 class="visually-hidden">Категории товаров</h2>
+      <ul class="categories-list">
+        <li class="categories-item">
+          <a href="#">
+            <h3>Виртуальная реальность</h3>
+          </a>
         </li>
-        <li class="popular-item">
-          <h3><a href="">Моноподы для селфи</a></h3>
+        <li class="categories-item">
+          <a href="#">
+            <h3>Моноподы для селфи</h3>
+          </a>
         </li>
-        <li class="popular-item">
-          <h3><a href="">Экшн-камеры</a></h3>
+        <li class="categories-item">
+          <a href="#">
+            <h3>Экшн-камеры</h3>
+          </a>
         </li>
-        <li class="popular-item">
-          <h3><a href="">Фитнес-браслеты</a></h3>
+        <li class="categories-item">
+          <a href="#">
+            <h3>Фитнес-браслеты</h3>
+          </a>
         </li>
-        <li class="popular-item">
-          <h3><a href="">Умные часы</a></h3>
+        <li class="categories-item">
+          <a href="#">
+            <h3>Умные часы</h3>
+          </a>
         </li>
-        <li class="popular-item">
-          <h3><a href="">Квадрокоптеры</a></h3>
+        <li class="categories-item">
+          <a href="#">
+            <h3>Квадрокоптеры</h3>
+          </a>
         </li>
       </ul>
     </section>
 
     <section class="services">
-      <h2>Услуги</h2>
+      <h2 class="visually-hidden">Услуги</h2>
       <div>
         <ul class="services-toggle">
           <li><button class="button" type="button">Доставка</button></li>
@@ -203,13 +216,13 @@
 
     </section>
 
-    <section class="logotypes">
-      <h2 class="visually-hidden">Логотипы (наши партнеры)</h2>
-      <ul class="logotypes-list">
-        <li class="logotypes-item"><img src="./img/logo-1.jpg" alt="DJI"></li>
-        <li class="logotypes-item"><img src="./img/logo-2.jpg" alt="SP Gadgets"></li>
-        <li class="logotypes-item"><img src="./img/logo-3.jpg" alt="GoPro"></li>
-        <li class="logotypes-item"><img src="./img/logo-4.jpg" alt="VIVE"></li>
+    <section class="brands">
+      <h2 class="visually-hidden">Бренды</h2>
+      <ul class="brands-list">
+        <li class="brands-item"><img src="./img/logo-color-1.jpg" width="260" height="100" alt="DJI"></li>
+        <li class="brands-item"><img src="./img/logo-color-2.jpg" width="260" height="100" alt="SP Gadgets"></li>
+        <li class="brands-item"><img src="./img/logo-color-3.jpg" width="260" height="100" alt="GoPro"></li>
+        <li class="brands-item"><img src="./img/logo-color-4.jpg" width="260" height="100" alt="VIVE"></li>
       </ul>
     </section>
 
@@ -239,37 +252,8 @@
   </main>
 
   <footer class="main-footer">
-    <ul class="footer-navigation">
-      <li><a href="#">Доставка</a></li>
-      <li><a href="#">Гарантия</a></li>
-      <li><a href="#">Контакты</a></li>
-    </ul>
-    <ul class="footer-user-navigation">
-      <li class="login-link"><a href="#">Войти</a></li>
-    </ul>
-    <ul class="footer-options">
-      <li><a href="#">Сравнить</a></li>
-      <li><a href="#">Корзина</a></li>
-    </ul>
-    <div class="info">
-      <p><strong>Device</strong></p>
-      <p>г. Москва, ул. Строителей, 15</p>
-      <p>Тел.: +7 (495) 495-95-95</p>
-    </div>
-    <ul class="footer-social">
-      <li><a href="#" class="social-button">Фейсбук</a></li>
-      <li><a href="#" class="social-button">Инстаграм</a></li>
-      <li><a href="#" class="social-button">Твиттер</a></li>
-    </ul>
-    <p class="footer-copyright">
-      <b>Разработано:</b>
-      <a href="https://htmlacademy.ru" class="button">HTML Academy</a>
-    </p>
-  </footer>
-
-  <footer class="main-footer">
     <div class="footer-left">
-      <p><strong>Device</strong></p>
+      <a class="footer-logo" href="#"><strong>Device<strong></a>
       <p>г. Москва, ул. Строителей, 15</p>
     </div>
     <div class="footer-center">
@@ -279,50 +263,59 @@
         <li><a href="#">Контакты</a></li>
       </ul>
       <ul class="footer-social">
-        <li><a href="#" class="social-button">Фейсбук</a></li>
-        <li><a href="#" class="social-button">Инстаграм</a></li>
-        <li><a href="#" class="social-button">Твиттер</a></li>
+        <li>
+          <a href="#" class="social-button social-button-1">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="social-button social-button-2">
+            <span class="visually-hidden">ВКонтакте</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="social-button social-button-3">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
+        </li>
       </ul>
     </div>
     <div class="footer-right">
       <ul class="footer-user-navigation">
-        <li class="login-link"><a href="#">Войти</a></li>
+        <li><a class="login-link" href="#">Войти</a></li>
       </ul>
       <ul class="footer-options">
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
+        <li><a class="compare" href="#">Сравнить</a></li>
+        <li><a class="cart" href="#">Корзина</a></li>
       </ul>
-      <p class="footer-copyright">
-        <b>Разработано:</b>
-        <a href="https://htmlacademy.ru" class="button">HTML Academy</a>
-      </p>
+      <a class="footer-copyright visually-hidden" href="https://htmlacademy.ru" class="button">HTML Academy</a>
     </div>
   </footer>
 
   <section class="modal write-us">
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-      <p>
+      <p class="feedback-item">
         <label for="name-id">Ваше имя:</label>
         <input id="name-id" type="text" name="name" placeholder="Имя Фамилия">
       </p>
-      <p>
+      <p class="feedback-item">
         <label for="email-id">Ваш e-mail:</label>
         <input id="email-id" type="email" name="email" placeholder="email@example.com">
       </p>
-      <p>
+      <p class="feedback-item">
         <label for="text-id">Текст письма:</label>
         <textarea id="text-id" name="text" placeholder="В свободной форме" rows="8" cols="80"></textarea>
       </p>
       <button class="button" type="submit">Отправить</button>
     </form>
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
 
   <section class="modal map-popup">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <img src="./img/map-big.jpg" width="960" height="559" alt="Офис компании находится по адресу ул. Строителей, 15">
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
 
 </body>
